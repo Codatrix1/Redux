@@ -1,4 +1,4 @@
-<h1> React Redux </h1>
+<h1> Redux React </h1>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
