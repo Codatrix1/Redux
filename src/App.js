@@ -519,22 +519,17 @@ You may define the function with a second argument, ownProps , if your component
 import React from "react";
 import Navbar from "./components/Navbar"; // components
 import CartContainer from "./components/CartContainer";
-import cartItems from "./cart-items"; // items
 
 // redux stuff
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducer";
 
-// initial store
-const initialStore = {
-  cart: cartItems,
-  total: 107,
-  amount: 5,
-};
-
 // store/Global State
-const store = createStore(reducer, initialStore);
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const App = function () {
   // cart setup
