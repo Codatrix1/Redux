@@ -168,6 +168,7 @@ const reducer = (state = initialStore, action) => {
 
         cartTotal.total += itemTotal;
         cartTotal.amount += amount;
+
         return cartTotal;
       },
       {

@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import { CLEAR_CART, GET_TOTALS } from "../actions";
 
 const CartContainer = ({ cart = [], total, dispatch }) => {
+  // runs each and every time, the component re-renders w/ dependency array
   useEffect(() => {
     dispatch({ type: GET_TOTALS });
   }, [cart, dispatch]);

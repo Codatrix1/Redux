@@ -74,13 +74,7 @@ import React from "react";
 
 // redux stuff
 import { connect } from "react-redux";
-import {
-  INCREASE,
-  DECREASE,
-  REMOVE,
-  TOGGLE_AMOUNT,
-  removeItem,
-} from "../actions";
+import { INCREASE, DECREASE, TOGGLE_AMOUNT, removeItem } from "../actions";
 
 const CartItem = ({ img, title, price, amount, remove, toggle }) => {
   return (
@@ -131,7 +125,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const { id, amount } = ownProps;
 
   return {
-    remove: () => dispatch(removeItem(id)),
+    remove: () => dispatch(removeItem(id)), // w/ Action Creator
     increase: () => dispatch({ type: INCREASE, payload: { id: id } }),
     decrease: () =>
       dispatch({ type: DECREASE, payload: { id: id, amount: amount } }),
